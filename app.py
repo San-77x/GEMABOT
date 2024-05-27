@@ -17,29 +17,29 @@ groq_api_key=os.getenv('GROQ_API_KEY')
 os.environ["GOOGLE_API_KEY"]=os.getenv("GOOGLE_API_KEY")
 
 
-#######TO LOGIN WITH PASSWORD
+# #######TO LOGIN WITH PASSWORD
 
-def check_password():
-    """Returns True if the user had the correct password."""
+# def check_password():
+#     """Returns True if the user had the correct password."""
 
-    password = "PCAMEG" 
+#     password = "PCAMEG" 
 
-    def password_entered():
-        """Checks whether the password entered by user is correct"""
-        if st.session_state["password"] == password:
-            st.session_state["password_correct"] = True
-        else:
-            st.session_state["password_correct"] = False
+#     def password_entered():
+#         """Checks whether the password entered by user is correct"""
+#         if st.session_state["password"] == password:
+#             st.session_state["password_correct"] = True
+#         else:
+#             st.session_state["password_correct"] = False
 
-    if st.session_state.get("password_correct", False):
-        return True
+#     if st.session_state.get("password_correct", False):
+#         return True
 
-    st.text_input("Password", type="password", on_change=password_entered, key="password")
-    return False
+#     st.text_input("Password", type="password", on_change=password_entered, key="password")
+#     return False
 
-if not check_password():
-    st.error("Enter the Password")
-    st.stop()
+# if not check_password():
+#     st.error("Enter the Password")
+#     st.stop()
 
 
 
